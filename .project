@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>CollegeProject</name>
+=======
+	<name>BankingApp</name>
+>>>>>>> 62908b6178c1b46ecf50c318a22722c300f5dc7d
 	<comment></comment>
 	<projects>
 	</projects>

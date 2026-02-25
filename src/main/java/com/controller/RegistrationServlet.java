@@ -1,17 +1,27 @@
 package com.controller;
 
 import java.io.IOException;
+<<<<<<< HEAD
 
 import com.dao.StudentDao;
 import com.model.StudentModel;
 
 import jakarta.servlet.RequestDispatcher;
+=======
+import java.sql.Connection;
+
+import com.dao.UserDao;
+import com.model.UserModel;
+import com.utility.Utility;
+
+>>>>>>> 62908b6178c1b46ecf50c318a22722c300f5dc7d
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 @WebServlet("/RegistrationServlet")
 public class RegistrationServlet extends HttpServlet {
 
@@ -51,4 +61,30 @@ public class RegistrationServlet extends HttpServlet {
 			request.getRequestDispatcher("Registration.jsp").include(request, response);
 		}
 	}
+=======
+
+@WebServlet("/RegistrationServlet")
+public class RegistrationServlet extends HttpServlet {
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+
+		try{
+			UserModel u=new UserModel();
+			u.setUsername(username);
+			u.setPassword(password);
+			UserDao dao = new UserDao();
+			boolean status = dao.registerUser(u);
+			if (status) {
+				res.sendRedirect("login.jsp");
+			} else {
+				req.setAttribute("error", "Registration failed");
+				req.getRequestDispatcher("register.jsp").forward(req, res);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+>>>>>>> 62908b6178c1b46ecf50c318a22722c300f5dc7d
 }

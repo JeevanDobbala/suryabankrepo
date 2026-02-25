@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+<<<<<<< HEAD
   <display-name>CollegeProject</display-name>
   <welcome-file-list>
     <welcome-file>Login.jsp</welcome-file>
     
+=======
+  <display-name>BankingApp</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+>>>>>>> 62908b6178c1b46ecf50c318a22722c300f5dc7d
   </welcome-file-list>
 </web-app>
